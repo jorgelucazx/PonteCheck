@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PonteRadar | Monitoramento de Velocidade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="functions.js"></script>
+</head>
+<body>
+
+    <!-- header -->
+    <header class="header">
+        <div class="logo">
+            <h1>PonteRadar</h1>
+            <span>Sistema de Monitoramento</span>
+        </div>
+
+        <div class="header-info">
+            <span>Ponte Rio-Niterói</span>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <!-- apresentação -->
+        <section class="dashboard-intro">
+            <div class="intro-text">
+                <span class="section-label">
+                    PAINEL DE MONITORAMENTO
+                </span>
+
+                <h2>Monitoramento de Velocidade</h2>
+
+                <p>
+                    Analise a travessia de veículos pela Ponte
+                    Rio-Niterói utilizando o Teorema do Valor Médio.
+                </p>
+            </div>
+        </section>
+
+        <!-- formulário -->
+        <section class="card form-card">
+            <div class="card-header">
+                <h3>Dados da Travessia</h3>
+                <p>
+                    Preencha as informações do veículo
+                    para realizar a análise.
+                </p>
+            </div>
+
+            <form id="form-travessia">
+
+                <div class="form-group">
+                    <label for="placa">Placa do Veículo</label>
+                    <input
+                        type="text"
+                        id="placa"
+                        name="placa"
+                        placeholder="ABC1D23"
+                        maxlength="7"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="entrada">
+                            Horário de Entrada
+                        </label>
+                        <input
+                            type="time"
+                            id="entrada"
+                            name="entrada"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="saida">
+                            Horário de Saída
+                        </label>
+                        <input
+                            type="time"
+                            id="saida"
+                            name="saida"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+                    <div class="info-item">
+                        <span>Distância considerada</span>
+                        <strong>13,29 km</strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Limite de referência</span>
+                        <strong>80 km/h</strong>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-primary" onclick="analisarTr()">
+                    Analisar Travessia
+                </button>
+
+            </form> 
+        </section>
+
+        <!-- resultados -->
+        <section class="results-section">
+
+            <div class="section-heading">
+                <h3>Resultado da Análise</h3>
+                <p>
+                    Informações calculadas a partir dos
+                    dados da travessia.
+                </p>
+            </div>
+
+            <div class="results-grid">
+
+                <div class="card result-card">
+                    <span class="result-label">
+                        Tempo de Travessia
+                    </span>
+
+                    <strong class="result-value" id="tempo-resultado">
+                        
+                    </strong>
+
+                    <span class="result-description">
+                        Tempo total do percurso
+                    </span>
+                </div>
+
+                <div class="card result-card">
+                    <span class="result-label">
+                        Velocidade Média
+                    </span>
+
+                    <strong class="result-value" id="velocidade-resultado">
+                        <p id="velocidade"></p>
+                    </strong>
+
+                    <span class="result-description">
+                        Velocidade calculada
+                    </span>
+                </div>
+
+                <div class="card result-card">
+                    <span class="result-label">
+                     
+                    </span>
+
+                    <strong class="result-value status-pending" id="situacao-resultado">
+                        <p id="resultado"></p>
+                    </strong>
+
+                    <span class="result-description">
+                        Resultado da fiscalização
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DEMONSTRAÇÃO MATEMÁTICA -->
+        <section class="card math-card">
+
+            <div class="card-header">
+                <h3>Demonstração Matemática</h3>
+                <p>
+                    Aplicação do Teorema do Valor Médio
+                    na análise da travessia.
+                </p>
+            </div>
+
+            <div class="math-content" id="demonstracao-tvm">
+
+                <div class="formula-box">
+                    <span>Teorema do Valor Médio</span>
+
+                    <p class="formula">
+                        s'(c) = [s(b) - s(a)] / (b - a)
+                    </p>
+                </div>
+
+                <div class="math-explanation">
+                    <h4>Interpretação</h4>
+
+                    <p>
+                        O Teorema do Valor Médio garante que,
+                        para uma função posição contínua
+                        e derivável no intervalo considerado,
+                        existe pelo menos um instante em que
+                        a velocidade instantânea é igual
+                        à velocidade média.
+                    </p>
+
+                    <p id="explicacao-resultado">
+                        Preencha os dados da travessia
+                        para visualizar a análise matemática.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>
+            PonteCheck | Sistema de Monitoramento de Velocidade
+        </p>
+        <span>
+            Desenvolvido para estudo do Teorema do Valor Médio
+        </span>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F3F6FA;
+    color: #10243A;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    background-color: #10243A;
+    color: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo span {
+    font-size: 12px;
+    color: #AFC4DA;
+}
+
+.header-info {
+    font-size: 14px;
+    color: #D5E2F0;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    flex: 1;
+}
+
+/* APRESENTAÇÃO */
+
+.dashboard-intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-label {
+    display: block;
+    color: #2563EB;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.intro-text h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.intro-text p {
+    color: #64748B;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* CARDS */
+
+.card {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 4px 12px rgba(16, 36, 58, 0.04);
+}
+
+.card-header {
+    margin-bottom: 28px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* FORMULÁRIO */
+
+.form-card {
+    margin-bottom: 36px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background-color: white;
+    font-family: inherit;
+    font-size: 15px;
+    color: #10243A;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #94A3B8;
+}
+
+#placa {
+    text-transform: uppercase;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* INFORMAÇÕES DA PONTE */
+
+.info-box {
+    background-color: #F3F6FA;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info-item span {
+    color: #64748B;
+    font-size: 13px;
+}
+
+.info-item strong {
+    font-size: 18px;
+}
+
+/* BOTÃO */
+
+.btn-primary {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* RESULTADOS */
+
+.results-section {
+    margin-bottom: 36px;
+}
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: #64748B;
+    font-size: 14px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #64748B;
+    font-weight: 600;
+}
+
+.result-value {
+    font-size: 26px;
+    color: #10243A;
+    overflow-wrap: anywhere;
+}
+
+.result-description {
+    font-size: 12px;
+    color: #94A3B8;
+}
+
+.status-pending {
+    color: #64748B;
+}
+
+.status-success {
+    color: #16A34A;
+}
+
+.status-danger {
+    color: #DC2626;
+}
+
+/* DEMONSTRAÇÃO MATEMÁTICA */
+
+.math-card {
+    margin-bottom: 36px;
+}
+
+.math-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formula-box {
+    background-color: #EFF6FF;
+    border-left: 4px solid #2563EB;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.formula-box span {
+    font-size: 13px;
+    color: #1D4ED8;
+    font-weight: 600;
+}
+
+.formula {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 16px;
+    color: #10243A;
+    overflow-wrap: anywhere;
+}
+
+.math-explanation h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.math-explanation p {
+    font-size: 14px;
+    color: #64748B;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    padding: 24px 20px;
+    background-color: #10243A;
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.footer span {
+    font-size: 12px;
+    color: #AFC4DA;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .header-info {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    .main-content {
+        padding: 24px 16px;
+    }
+
+    .intro-text h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .form-row,
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .results-grid {
+        gap: 16px;
+    }
+
+    .info-box {
+        flex-direction: column;
+    }
+
+    .result-value {
+        font-size: 24px;
+    }
+
+    .formula {
+        font-size: 17px;
+    }
+}
+
+
+/* AJUSTES DE TIPOGRAFIA */
+
+.logo h1 {
+    font-size: 23px;
+}
+
+.intro-text h2 {
+    font-size: 25px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+}
+
+.section-heading h3 {
+    font-size: 19px;
+}
+
+.result-value {
+    font-size: 22px;
+}
+
+.formula {
+    font-size: 19px;
+}
+
+.form-group input {
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .intro-text h2 {
+        font-size: 22px;
+    }
+
+    .result-value {
+        font-size: 21px;
+    }
+
+    .formula {
+        font-size: 17px;
+    }
+}
