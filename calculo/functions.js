@@ -5,9 +5,9 @@ function converterHoras(){
     let inicio = document.getElementById('entrada').value;
     let fim = document.getElementById('saida').value;   
 
-     if(!fim || !inicio || fim <= inicio){
+     if(!fim || !inicio || fim == inicio){
         alert("Informe o horário correto!");
-        return;
+        return null;
     }
 
     let hIni = inicio.split(":");
@@ -16,14 +16,21 @@ function converterHoras(){
     let hInicial = Number(hIni[0]) + (Number(hIni[1])/60);
     let hFinal = Number(hFim[0]) + (Number(hFim[1])/60);
 
+    // Se a hora final for menor que a inicial, adiciona 24 horas para calcular corretamente a diferença
+    
+    if (hFinal < hInicial) {
+        hFinal += 24;
+    }
+
     return hFinal - hInicial;
 
 }
 
+//<!---ANALISE DE VELOCIDADE--->
 function analisarTr(){
 
     let velocidade;
-    let multado;
+   
     const tamanho = 13.29;
     let tempo = converterHoras();
 
@@ -45,7 +52,10 @@ function analisarTr(){
     document.getElementById('velocidade').textContent = `${velocidade.toFixed(1)} km/h`;
 
     if(velocidade>80){
-        document.getElementById('situacao-resultado').textContent = dsd;
+        document.getElementById('situacao-resultado').textContent = "Multado!";
+    }
+    else{
+        document.getElementById('situacao-resultado').textContent = "Dentro do limite!";
     }
 
 
